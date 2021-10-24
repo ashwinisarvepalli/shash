@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.scss';
 import MapChart from './components/MapChart.js'
+import CaseStudies from './components/CaseStudies.js'
+import Partnerships from './components/Partnerships.js'
+import Games from './components/Games.js'
 import {
     Switch,
     Route,
@@ -14,7 +17,6 @@ function App() {
       <header className="App-header">
         <h4> Where's My Water </h4>
         <div className="pages">
-          <Link></Link>
           <Link to="/Case Studies" className="item-but"> Case Studies </Link>
           <Link to="/Partnerships" className="item-but"> Partnerships </Link>
           <Link to="/Games" className="item-but"> Games </Link>
@@ -25,13 +27,13 @@ function App() {
             <MapChart/>
           </Route>
           <Route exact path="/Case Studies">
-            <ListView />
+            <CaseStudies />
           </Route>
           <Route exact path="/Partnerships">
-            <GalleryView />
+            <Partnerships />
           </Route>
           <Route exact path="/Games">
-            <Details />
+            <Games />
           </Route>
         </Switch> 
       </div>
