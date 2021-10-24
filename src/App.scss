@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: #29A0B1;
+  height: 250vh;
 }
 
 .App-header {
@@ -23,9 +25,14 @@
 
   .item-but{
     text-decoration: none;
-    font-size:15px;
+    font-size:17px;
     padding:5px;
     color: white;
+  }
+
+  .item-but:hover {
+    color: #98D7C2;
+    font-size: 21px;
   }
 
   .item-but .item-but:hover {
@@ -39,15 +46,6 @@
     align-items: center;
     gap: 30px;
     padding:12px;
-
-    // list-style-type: none;
-    // margin: 0;
-    // padding: 0;
-    // overflow: hidden;
-    // background-color: #333;
-    // position: -webkit-sticky; /* Safari */
-    // position: sticky;
-    // top: 0;
   }
   
 }

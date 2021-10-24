@@ -1,9 +1,26 @@
-.flex-grid-thirds {
-    display: flex;
-    justify-content: space-between;
-  }
+* {
+  box-sizing: border-box;
+}
+html, body, div, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+}
 
-  .col {
-    background: salmon;
-    padding: 20px;
-  }
+.container {
+  padding-top:30px;
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.item {
+  width: 20%;
+  padding: 20;
+}

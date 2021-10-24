@@ -1,0 +1,16 @@
+
+
+.info {
+    display:flex;
+    justify-content:center;
+    padding:10px;
+    flex-flow: column nowrap;
+    h1 {
+        color: white;
+    }
+    p {
+        text-align : left;
+        color: white;
+    }
+}
+
