@@ -7,40 +7,37 @@ import {
 } from "react-simple-maps";
 
 const geoUrl =
-  "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
+    "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
 const markers = [
-  {
-    markerOffset: -30,
-    name: "Buenos Aires",
-    coordinates: [-58.3816, -34.6037]
-  },
-  { markerOffset: 15, name: "La Paz", coordinates: [-68.1193, -16.4897] },
-  { markerOffset: 15, name: "Brasilia", coordinates: [-47.8825, -15.7942] },
-  { markerOffset: 15, name: "Santiago", coordinates: [-70.6693, -33.4489] },
-  { markerOffset: 15, name: "Bogota", coordinates: [-74.0721, 4.711] },
-  { markerOffset: 15, name: "Quito", coordinates: [-78.4678, -0.1807] },
-  { markerOffset: -30, name: "Georgetown", coordinates: [-58.1551, 6.8013] },
-  { markerOffset: -30, name: "Asuncion", coordinates: [-57.5759, -25.2637] },
-  { markerOffset: 15, name: "Paramaribo", coordinates: [-55.2038, 5.852] },
-  { markerOffset: 15, name: "Montevideo", coordinates: [-56.1645, -34.9011] },
-  { markerOffset: 15, name: "Caracas", coordinates: [-66.9036, 10.4806] },
-  { markerOffset: 15, name: "Lima", coordinates: [-77.0428, -12.0464] }
+  { markerOffset: 15, name: "Cape Town", coordinates: [-33.9248685, 18.424055299999964]},
+  { markerOffset: 15, name: "Flint", coordinates: [43.0125274, -83.68745619999999] },
+  { markerOffset: 15, name: "Kenya", coordinates: [-0.023559, 37.90619300000003] },
+  { markerOffset: 15, name: "Bang", coordinates: [23.684994, 90.35633099999995] },
+  { markerOffset: 15, name: "PeshawarPaki", coordinates: [20.593684, 78.96288000000004] },
+  { markerOffset: 15, name: "Najaf", coordinates: [32.027376, 4.33311649999996] },
+  { markerOffset: 15, name: "Gaza Strip", coordinates: [31.3546763, 34.30882550000001] },
+  { markerOffset: 15, name: "Kabulafghan", coordinates: [34.5553494, 69.20748600000002] },
+  { markerOffset: 15, name: "Syria", coordinates: [34.80207499999999, 38.99681499999997] },
+  { markerOffset: 15, name: "Karachi", coordinates: [25.0700428, 67.2847875] },
+  { markerOffset: 15, name: "Sanaa", coordinates: [15.3694451, 44.19100660000004] },
+  { markerOffset: 15, name: "Lagos Lagoon", coordinates: [6.4310951, 3.401896899999997] },
+  { markerOffset: 15, name: "Caracas", coordinates: [10.4805937, -66.90360629999998] },
+  { markerOffset: 15, name: "Rum", coordinates: [54.0088637, 26.390325500000017] },
+  { markerOffset: 15, name: "Krasnoyarsk", coordinates: [56.01528339999999, 92.8932476] },
+  { markerOffset: 15, name: "Kathmandu", coordinates: [27.7172453, 85.3239605] },
+  { markerOffset: 15, name: "Islamabad", coordinates: [33.6844202, 73.04788480000002] },
+  { markerOffset: 15, name: "Allahabad", coordinates: [25.4358011,81.84631100000001] },
+  { markerOffset: 15, name: "Chiffa", coordinates: [36.4594664, 2.7282189999999673] },
+  { markerOffset: 15, name: "Yanngon", coordinates: [16.8660694, 96.19513200000006] }
 ];
 
 const MapChart = () => {
   return (
-    <ComposableMap
-      projection="geoAzimuthalEqualArea"
-      projectionConfig={{
-        rotate: [58, 20, 0],
-        scale: 400
-      }}
-    >
+    <ComposableMap>
       <Geographies geography={geoUrl}>
         {({ geographies }) =>
           geographies
-            .filter(d => d.properties.REGION_UN === "Americas")
             .map(geo => (
               <Geography
                 key={geo.rsmKey}
@@ -53,17 +50,7 @@ const MapChart = () => {
       </Geographies>
       {markers.map(({ name, coordinates, markerOffset }) => (
         <Marker key={name} coordinates={coordinates}>
-          <g
-            fill="none"
-            stroke="#FF5533"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            transform="translate(-12, -24)"
-          >
-            <circle cx="12" cy="10" r="3" />
-            <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
-          </g>
+          <circle r={10} fill="#98D7C2" stroke="#fff" strokeWidth={2} />
           <text
             textAnchor="middle"
             y={markerOffset}
