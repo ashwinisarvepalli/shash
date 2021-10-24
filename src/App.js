@@ -17,6 +17,7 @@ function App() {
       <header className="App-header">
         <h4> Where's My Water </h4>
         <div className="pages">
+        <Link to="/" className="item-but"> Home </Link>
           <Link to="/Case Studies" className="item-but"> Case Studies </Link>
           <Link to="/Partnerships" className="item-but"> Partnerships </Link>
           <Link to="/Games" className="item-but"> Games </Link>
