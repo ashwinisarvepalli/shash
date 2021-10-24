@@ -15,24 +15,27 @@ function App() {
         <h4> Where's My Water </h4>
         <div className="pages">
           <Link></Link>
-          <Link to="/Case Studies" className="item-but">Case Studies</Link>
-          <Link to="/AboutUs" className="item-but" >Sponsors/Partnerships</Link>
-          <Link to="/GalleryView" className="item-but" >Gallery View</Link>
+          <Link to="/Case Studies" className="item-but"> Case Studies </Link>
+          <Link to="/Partnerships" className="item-but"> Partnerships </Link>
+          <Link to="/Games" className="item-but"> Games </Link>
         </div>
       </header>
         <Switch>
-          <Route exact path="/ListView">
+          <Route exact path="/">
+            <MapChart/>
+          </Route>
+          <Route exact path="/Case Studies">
             <ListView />
           </Route>
-          <Route exact path="/GalleryView">
+          <Route exact path="/Partnerships">
             <GalleryView />
           </Route>
-          <Route exact path="/Details/:name">
+          <Route exact path="/Games">
             <Details />
           </Route>
         </Switch> 
       </div>
-      <MapChart/>
+      
   );
 }
 
